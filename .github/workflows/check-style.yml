@@ -3,7 +3,9 @@ platform :android do
     gradle(task: "bundleRelease")
     upload_to_play_store(track: "internal", aab: "app/build/outputs/bundle/release/app-release.aab")
   end
-endname: check-style
+git add .
+git commit -m "Added CI/CD workflows for Android and iOS"
+git push origin main
 
 # Get the repository with all commits to ensure that we can analyze
 # all of the commits contributed via the Pull Request.
